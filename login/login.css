@@ -1,0 +1,31 @@
+
+a{
+    text-decoration: none;
+    color: white;
+}
+#error{
+    display: none;
+}
+.error1{
+    display: none;
+}
+.mostrar{
+    display: block;
+     position: absolute;
+    z-index: 1;
+
+}
+
+button{
+    margin-top: 12px;
+}
+.correcto{
+    display: none;  
+    position: absolute;
+    z-index: 1;
+}
+.correcto1{
+    display: block;
+   
+   
+}
