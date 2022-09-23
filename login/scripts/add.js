@@ -8,11 +8,11 @@ btnNuevoUsuario.addEventListener("click",UserNew)
 salir.addEventListener("click",login)
 
 function UserNew(){
-  btnNuevoUsuario.removeEventListener("click",UserNew)
 conte.classList.add("ocultarLogin")
 salir.innerHTML="Login"
 tituloLogin.innerHTML="Nuevo usuario"
 btnNuevoUsuario.classList.add("status")
+salir.classList.remove("status")
 NuevoUsuario()
 }
 const NuevoUsuario=()=>{   
@@ -35,7 +35,8 @@ const form=document.createElement("form")
   div.appendChild(label3)
   div.appendChild(input4)
  div.classList.add("row")
- div.setAttribute("id","Login")
+ div.setAttribute("id","NewUser")
+ form.setAttribute("id","New")
  input1.setAttribute("type","text")
  input2.setAttribute("type","text")
  input3.setAttribute("type","password")
@@ -52,23 +53,22 @@ const form=document.createElement("form")
     
 
 }
-function login(){
-  const UserNew=document.querySelector('#Login')
+
+function login(e){
+  console.log( e.target.value);
+  const User= document.querySelector("#NewUser")
+  const form2= document.querySelector("#New")
+  console.log(User);
+  console.log(form2);
+  conteLogin.removeChild(form2)
     conte.classList.remove("ocultarLogin");
-    UserNew.style.display="none" 
     btnNuevoUsuario.classList.remove("status")
-    btnNuevoUsuario.addEventListener("click",UserNewx)
     salir.classList.add("status")
-    function UserNewx(){
-    conte.classList.add("ocultarLogin")
-    salir.innerHTML="Login"
-    tituloLogin.innerHTML="Nuevo usuario"
-    btnNuevoUsuario.classList.add("status")
-    NuevoUsuario()
-    }
     salir.innerHTML="Salir"
+    User.classList.add("ocultarLogin")
     if (btnNuevoUsuario!=true) {
       console.log(true);
+     // salir.href="file:///C:/Users/javacrispt/Desktop/cajeros_aumatico/Home/index.html"
     }else{
       console.log(false);
     }
