@@ -1,7 +1,13 @@
 
-a{
+body{
+    background-color: rgb(253, 208, 152);
+    color: black;
+}
+
+.btn-outline-danger{
     text-decoration: none;
     color: white;
+    border-color: #02f92e;
 }
 #error{
     display: none;
@@ -28,4 +34,10 @@ button{
     display: block;
    
    
+}
+.ocultarLogin{
+    display: none;
+}
+.status{
+    background-color:red;
 }

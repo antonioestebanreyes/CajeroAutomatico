@@ -35,7 +35,7 @@ img {
   position: absolute;
 }
 #contenedor {
-  background: url("cajero.jpg");
+  background: url("../cajero.jpg");
   background-size: cover;
 }
 .efectivo {

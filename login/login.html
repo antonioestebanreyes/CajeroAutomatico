@@ -10,18 +10,18 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="../login/style/login.css" />
     <title>Login</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="contenedor">
       <div class="row bg-success">
         <div class="col-12 d-flex justify-content-center">
           <header>
             <a href="#" class="btn btn-outline-danger"
-              >Crear una nueva cuenta</a
+              id="NuevoUsuario">Crear una nueva cuenta</a
             >
-            <a href="file:///C:/Users/javacrispt/Desktop/cajeros/Inicio_de_la_pagina/inicio.html" class="btn btn-outline-danger">Salir</a>
+            <a href="#" class="btn btn-outline-danger" id="salir">Salir</a>
           </header>
         </div>
       </div>
@@ -43,8 +43,8 @@
             />
           </svg>
           <div>
-            Los datos que esta ingresado son erronios. Por de verificar sus
-            credenciales
+            Los datos que esta ingresado son erronios. Por favor de verificar sus
+            credenciales.
             <button class="btn btn-danger" id="cerar">X</button>
           </div>
         </div>
@@ -73,14 +73,14 @@
         <div></div>
       </div></div>
 
-      <div class="row"id="login"> 
+      <div class="row"> 
         <div  class="col-12 d-flex justify-content-center">
       <svg id="icono_user"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person  " viewBox="0 0 16 16">
         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
       </svg></div>
-        <div class="col-12" ><h1 class="dispaly-5 text-center">Login</h1></div>
-        <div class="col-12 d-flex justify-content-center" >
-          <form name="myform" autocomplete="on" method="post" >
+        <div class="col-12" ><h1 class="dispaly-5 text-center" id="tituloLogin">Login</h1></div>
+        <div class="col-12 d-flex justify-content-center" id="conteLogin">
+          <form name="myform" autocomplete="on" method="post"  id="login">
             <label for="nombreDeUsuario" class="form-label"
               >Ingresa tu usuario</label
             >
@@ -112,6 +112,7 @@
         </div>
       </div>
     </div>
-    <script src="login.js"></script>
+    <script src="../login/scripts/login.js"></script>
+    <script src="../login/scripts/add.js"></script>
   </body>
 </html>

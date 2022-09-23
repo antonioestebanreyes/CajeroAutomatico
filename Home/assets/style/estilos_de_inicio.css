@@ -1,5 +1,7 @@
 #contenedor{
-    height: 400px
+    height: 400px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
 }
 button{
     margin-top: 12px;
@@ -10,13 +12,9 @@ img{
     width: 100%;
     height: 100%;
 }
-#button:hover{
-    background: linear-gradient(red,blue,yellow);
-    transform: scale(2,1);
+#button a:hover{
+  color: white;
 
-}
-h1{
-    text-shadow: 6px 4px 6px white;
 }
 button a{
     color:aliceblue
