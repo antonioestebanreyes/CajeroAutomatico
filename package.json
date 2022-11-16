@@ -1,0 +1,22 @@
+{
+  "name": "cajeros_aumatico",
+  "version": "1.0.0",
+  "description": "Simulador de cajero automatico",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonioestebanreyes/CajeroAutomatico.git"
+  },
+  "author": "Antonio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonioestebanreyes/CajeroAutomatico/issues"
+  },
+  "homepage": "https://github.com/antonioestebanreyes/CajeroAutomatico#readme",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}

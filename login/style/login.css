@@ -1,0 +1,46 @@
+
+body{
+    background-color: rgb(253, 208, 152);
+    color: black;
+}
+
+.btn-outline-danger{
+    text-decoration: none;
+    color: white;
+    border-color: #02f92e;
+}
+#error{
+    display: none;
+}
+.error1{
+    display: none;
+}
+.mostrar{
+    display: block;
+     position: absolute;
+    z-index: 1;
+
+}
+
+button{
+    margin-top: 12px;
+}
+.correcto{
+    display: none;  
+    position: absolute;
+    z-index: 1;
+}
+.correcto1{
+    display: block;
+   
+   
+}
+.ocultarLogin{
+    display: none;
+}
+.status{
+    background-color:red;
+}
+#enlace{
+   color: #f8f9fa;
+}
