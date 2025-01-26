@@ -14,11 +14,18 @@
     <title>Login</title>
   </head>
   <body>
-    <div class="container-fluid" id="contenedor">
+    
+    <div class="container-fluid"  id="contenedor">
+     <div class="alert alert-danger ocultarLogin" role="alert" id="error" >
+      Ingresa tus dactos en los campos correspodiente
+      </div>
+      
+      
+
       <div class="row bg-success">
         <div class="col-12 d-flex justify-content-center">
           <header>
-            <a href="#" class="btn btn-outline-danger"
+            <a href="#" id="Crear" class="btn btn-outline-danger"
               id="NuevoUsuario">Crear una nueva cuenta</a
             >
             <a href="#" class="btn btn-outline-danger" id="salir">Salir</a>
@@ -26,29 +33,7 @@
         </div>
       </div>
      
-      <div class="error1" id="error1">
-        <div  style="padding-left: 40%;" class="alert alert-danger d-flex align-items-center" role="alert">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="red"
-            class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
-            viewBox="0 0 16 16"
-            role="img"
-            aria-label="Warning:"
-          >
-            <path
-              d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-            />
-          </svg>
-          <div>
-            Los datos que esta ingresado son erronios. Por favor de verificar sus
-            credenciales.
-            <button class="btn btn-danger" id="cerar">X</button>
-          </div>
-        </div>
-      </div>
+     
       <div id="correcto" class="correcto">
       <div style="padding-left: 40%;" class="alert alert-success d-flex align-items-center" role="alert" >
         <svg 
@@ -80,6 +65,10 @@
       </svg></div>
         <div class="col-12" ><h1 class="dispaly-5 text-center" id="tituloLogin">Login</h1></div>
         <div class="col-12 d-flex justify-content-center" id="conteLogin">
+          <div id="Registro">
+
+
+          </div>
           <form name="myform" autocomplete="on" method="post"  id="login">
             <label for="nombreDeUsuario" class="form-label"
               >Ingresa tu usuario</label
@@ -93,8 +82,7 @@
               />
             </div>
             <label for="contrasena" class="form-label"
-              >Ingresa tu contraseña</label
-            >
+              >Ingresa tu contraseña</label>
             <div class="col-12">
               <input
                 type="password"
@@ -105,14 +93,21 @@
             </div>
           </form>
         </div>
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <button id="btn" class="btn btn-primary"><a href="#" id="enlace">Enviar</a> </button>
+        <div class="row" id="PieDeLogin">
+          <div class="col-12 d-flex justify-content-center"id='Newbtn'>
+            <Submit id="btn" class="btn btn-primary"><a href="#" id="enlace">Enviar</a> </Submit>
+            
+          </div>
+          <div id="spinner">
+
+            
           </div>
         </div>
       </div>
     </div>
-    <script src="../login/scripts/login.js"></script>
-    <script src="../login/scripts/add.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/Registrar.js"></script>
+    
+   
   </body>
 </html>

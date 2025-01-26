@@ -9,22 +9,9 @@ body{
     color: white;
     border-color: #02f92e;
 }
-#error{
-    display: none;
-}
-.error1{
-    display: none;
-}
-.mostrar{
-    display: block;
-     position: absolute;
-    z-index: 1;
 
-}
 
-button{
-    margin-top: 12px;
-}
+
 .correcto{
     display: none;  
     position: absolute;
@@ -43,4 +30,46 @@ button{
 }
 #enlace{
    color: #f8f9fa;
+}
+
+.ocultar {
+    animation: ocultar 2s step-end;
+   
+}
+
+@keyframes ocultar {
+    0% {opacity: 1;
+    width: 100%;
+    text-align: center;
+    }
+    25% {opacity: 0.6;
+        width: 100%; 
+        text-align: center;
+  
+    }
+    50%{
+        opacity: 0.7;
+       width: 100%;
+       text-align: center;
+
+    }
+    100%{
+       opacity: 0;
+       width: 100%;
+       text-align: center;
+    }
+    
+}
+
+#contenedor{
+    z-index: 3;
+  
+}
+.ocultar{
+    z-index: 2;
+      position:absolute
+}
+
+.estado{
+
 }
