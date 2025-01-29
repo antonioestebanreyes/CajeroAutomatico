@@ -13,12 +13,32 @@ const Newbtn=D.querySelector('#Newbtn')
 const enviar=D.querySelector('#btn')
 const Registro=D.querySelector('#Registro')
 
+class NuevoUser{
+  constructor(){
+    this.User=[]
+    
+    
+  }
+  agregar (Usurio){
+    //Aqui estamos hacindo una copia anterior del objecto, para unir con el nuevo objecto
+    this.User=[...this.User,Usurio]
+    console.log(this.User);
+    //!Aqui esamos guardo todo las actualizaciones del objecto
+    const UserNuevo=JSON.stringify(this.User)
+localStorage.setItem('User',UserNuevo)
 
+  }
+  limpiar(){
+while(Registro.firstChild){
+Registro.removeChild(Registro.firstChild)
+}
+  }
+}
 btnNuevoUsuario.addEventListener("click",UserNew)
 enviar.addEventListener('click',Guardar_datos)
 
-let valor =0
-let estado=0
+
+const AgregarNuevo= new NuevoUser()
 function GuardarValorDeUser(nombre,apellido,contrasena,contrasenaRepeat,Email ){
   
 let User={
@@ -28,21 +48,22 @@ contrasena:contrasena,
 contrasenaRepeat:contrasenaRepeat,
 Email:Email,
 Saldo:5000,
+id: Date.now()
 
 }
-const UserNuevo=JSON.stringify(User)
-localStorage.setItem('User',UserNuevo)
+
+AgregarNuevo.agregar(User)
 
 }
 
 
 function UserNew(){
-  
-  estado++
+  console.log('si se esta ejecunado el codigo ');
+
 
   
 //!Aqui estamo condicionado,cuandas veces se va a repetir un elemento 
-valor++
+
 
 btnNuevoUsuario.classList.add('estado')
 conte.classList.add("ocultarLogin")
@@ -51,30 +72,10 @@ tituloLogin.innerHTML="Nuevo usuario"
 btnNuevoUsuario.classList.add("status")
 salir.classList.remove("status")
 
+//?Aqui estamos limpiado el html para no se repitan los elementos html 
 
-
- if (valor===1 || estado===1) {
- 
-  
-  if(conte.classList.contains('ocultarLogin')&& valor===1){
-
-   
-    
-     NuevoUsuario()
-
-  }
-}else{
-
-
-if (estado===1) {
-  
-  NuevoUsuario()
-
-}
-
- 
-  
-} 
+AgregarNuevo.limpiar()
+ NuevoUsuario()
 
 salir.addEventListener('click',MostrarLogin) 
 
@@ -159,7 +160,7 @@ if (btnNuevoUsuario.classList.contains('estado')) {
   const regex =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
   const names=D.querySelector('#name').value.trim() ;
   const lastName=D.querySelector('#lastName').value.trim();
-  const contrasena=D.querySelector('#password').value.T;
+  const contrasena=D.querySelector('#password').value.trim();
   const contrasenaRepeat=D.querySelector('#contrasenaRepeat').value.trim()
  const Email=D.querySelector('#email').value.trim()
 
@@ -170,7 +171,7 @@ if (btnNuevoUsuario.classList.contains('estado')) {
 if (  regex.test(Email)===true && names.length>0 || names.value===' ' && contrasena.length>0  ||contrasena===' ' ||contrasenaRepeat===' ' && contrasena === contrasenaRepeat ) {
  //*Aqui se esta guardo los valores del formulario de registro 
  //?Guardar elemnto en mayuscula,cuando se guarde en localstoge 
- GuardarValorDeUser(names,lastName,contrasena,contrasenaRepeat,Email)
+ GuardarValorDeUser(names.toUpperCase(),lastName.toUpperCase(),contrasena,contrasenaRepeat,Email)
 
     
     //!Aqui se se esta creado una ventan emergente para la creacion del un nuevo usuario
@@ -241,7 +242,7 @@ conte.classList.remove('ocultarLogin')
 btnNuevoUsuario.classList.remove('estado')
 salir.classList.add('status')
 btnNuevoUsuario.classList.remove('status')
-valor=0
+
 
   
     
